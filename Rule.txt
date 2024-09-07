@@ -1,0 +1,49 @@
+定義 class ：
+
+1. 每一個Mermaid Class Diagram開頭一定有 classDiagram 
+
+2. 使用 class 關鍵字，後面接著class 的名稱，例如 :  class BankAccount
+
+定義 class 成員：
+
+1. 一個class 的成員有 attributes (屬性)與 methods (方法)兩種
+
+2. Mermaid 根據是否存在括號 () 來區分屬性和方法。帶有 () 的被視為函數/方法，所有其他的statement視為屬性。
+
+3. 使用冒號 : 後跟隨成員名稱來關聯一個class的成員，適用於一次定義一個成員。例如：BankAccount : -String owner 代表owner這個屬性是屬於 BankAccount 的 class。
+
+4. 使用大括號{}關聯class的成員，其中成員在大括號內分組。適合於一次定義多個成員。（不過此種語法只會在challenge point的題目裡出現，如果你只打算拿基礎分數，可以不用考慮這個情況）
+
+5. + 表示public， - 表示private。
+
+Methods Return Type
+
+1. return 的類型一定會接在methods的右括號)後面，且一定有空格(可能有多個空格)在中間。例如：+getOwner() String 代表 getOwner 的 return type 為 String。
+
+2. 如果)後面沒有東西，則視為return為void。
+
+
+e.g.
+
+classDiagram
+class BankAccount
+BankAccount : -String owner
+BankAccount : -int balance
+BankAccount : +setOwner(String owner) void
+BankAccount : +isEnough(int value, int balance) void
+BankAccount : +getOwner() String
+
+|
+V
+ 
+public class BankAccount {
+    private String owner;
+    private int balance;
+    public void setOwner(String owner) {
+			  this.owner = owner;
+    }
+		public void isEnough(int value, int balance) {;}
+    public String getOwner() {
+        return owner;
+    }
+}

@@ -1,0 +1,7 @@
+classDiagram
+class A{+setOwner(String a)
+-String owner}
+class B{+getMembers() String[]}
+A:+getOwner() String
+B:-String[] members
+class B

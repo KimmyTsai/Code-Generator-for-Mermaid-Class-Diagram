@@ -1,0 +1,22 @@
+classDiagram
+class Person
+class Student {
+    +int studentID
+    +study() void
+}
+
+class Teacher {
+    +String teacherID
+    +teach() void
+    -int classnamE;
+}
+Person : -int age
+Person : -String name
+
+class Student {
+    -Teacher supervisor
+    +getSTudentName() String
+    -String className
+}
+Teacher : +String className
+Teacher : +int[] studentArray

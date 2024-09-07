@@ -1,0 +1,7 @@
+classDiagram
+    class Car
+    Car : -int price
+    Car : +getPrice() int
+    class Wheel
+    Wheel : -int size
+    Wheel : +setSize(         int            size       ,    int abcd  ) void

@@ -1,0 +1,19 @@
+classDiagram
+  A : +int numA
+  A:-int numB
+            class A
+    class B  
+
+class C
+
+class D{
+    -C[] otherClassAttr   
+    +getOtherClassAttr   (   )C[]  
+    +setOtherClassAttr(C  [  ] items  )  
+}
+
+D : +String descrip  
+                       D : +String   [    ]  descripes 
+
+    C:+voidFunction(     )  void
+        
